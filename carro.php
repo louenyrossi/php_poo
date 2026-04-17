@@ -16,8 +16,9 @@ class Carro {
     public function setVelocidade($novaVelocidade){
         if ($novaVelocidade >= 0 && $novaVelocidade <= 200) {
             $this->velocidade = $novaVelocidade;
+            echo "Você esta na velocidade continue<br>";
         } else {
-            echo "Velocidade Perigosa: $novaVelocidade<br>";
+            echo "Velocidade esta Perigosa.<br>";
         }
     }
 }
@@ -26,8 +27,8 @@ class Carro {
 $meuCarro = new Carro("Senai-Mobile", 0);
 
 // O desastre: alteração direta sem validação
-$meuCarro->setVelocidade(5000); // Velocidade de foguete?
-$meuCarro->getVelocidade(-60);   // Carro andando no tempo?
+$meuCarro->setVelocidade(200); // Velocidade de foguete?
+$meuCarro->getVelocidade();   // Carro andando no tempo?
 
 echo "Modelo: " . $meuCarro->modelo . "<br>";
 echo "Velocidade atual: " . $meuCarro->getVelocidade() . " km/h";
