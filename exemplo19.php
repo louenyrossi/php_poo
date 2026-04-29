@@ -21,7 +21,7 @@ abstract class FiguraGeometrica{
 }
 
 class Circunferencia extends FiguraGeometrica{
-    private $raio
+    private $raio;
 
     public function __construct($tipo, $raio)
     {
@@ -46,7 +46,7 @@ class Retangulo extends FiguraGeometrica{
 
     public function __construct($tipo, $lado1, $lado2)
     {
-        parent::__construct($tipo)
+        parent::__construct($tipo);
         $this->lado1 = $lado1;
         $this->lado2 = $lado2;
     }
@@ -62,7 +62,7 @@ class Retangulo extends FiguraGeometrica{
     }
 }
 
-$circ = new Circuferencia("Circunferencia", 10);
+$circ = new Circunferencia("Circunferencia", 10);
 $circ->printCaracteristicas();
 
 $retangulo = new Retangulo("Retangulo", 10, 20);
