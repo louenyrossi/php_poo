@@ -16,7 +16,7 @@ class Carro {
     public function setVelocidade($novaVelocidade){
         if ($novaVelocidade >= 0 && $novaVelocidade <= 200) {
             $this->velocidade = $novaVelocidade;
-            echo "Você esta na velocidade continue<br>";
+            echo "Você esta na velocidade continue!<br>";
         } else {
             echo "Velocidade esta Perigosa.<br>";
         }
